@@ -1,10 +1,10 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
+
 using WebApplication1.Database;
 using WebApplication1.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddCors(options =>
 {
