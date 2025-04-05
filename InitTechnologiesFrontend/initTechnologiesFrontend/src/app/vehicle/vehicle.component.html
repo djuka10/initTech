@@ -1,0 +1,67 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h1 class="card-title">List of vehicles</h1>
+          <button class="btn btn-primary btn-sm"  (click)="openDialogForCreate()">
+             <i class="material-icons">add</i> Add vehicle
+          </button>
+          <div style="display: flex; justify-content: space-between;">
+        </div>
+        </div>
+          <div class="input-group no-border">
+            <input type="text" class="form-control" placeholder="Search vehicles..." [(ngModel)]="searchQuery">
+            <button class="btn btn-white btn-round btn-just-icon">
+              <i class="material-icons">clear</i> Clear search
+            </button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="text-primary">
+                <th>
+                  <div style="display: flex; align-items: center;">
+                  Vehicle name
+                  <button style="border: none; padding: 2px 4px;">
+                    <i class="material-icons" style="font-size: 16px;">keyboard_arrow_up</i>
+                    <i class="material-icons" style="font-size: 16px;">keyboard_arrow_down</i>
+                  </button>
+                </div>
+                </th>
+                <th>
+                  <div style="display: flex; align-items: center;">
+                  Year
+                  <button  style="border: none; padding: 2px 4px;">
+                    <i class="material-icons" style="font-size: 16px;">keyboard_arrow_up</i>
+                    <i class="material-icons" style="font-size: 16px;">keyboard_arrow_down</i>
+                  </button>
+                </div>
+                </th>
+                <th>
+                  <div style="display: flex; align-items: center;">
+                  Fuel type
+                  <button  style="border: none; padding: 2px 4px;">
+                    <i class="material-icons" style="font-size: 16px;">keyboard_arrow_up</i>
+                    <i class="material-icons" style="font-size: 16px;">keyboard_arrow_down</i>
+                  </button>
+                </div>
+                </th>
+              </thead>
+              
+              <tbody>
+                <tr *ngFor="let vehicle of vehicles" class="animation">
+                  <td>{{vehicle.name}}</td>
+                  <td>{{vehicle.year}}</td>
+                  <td>{{vehicle.fuelType}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
