@@ -1,0 +1,15 @@
+<div class="panel-header">
+    <div class="header text-center">
+      <h1 class="title">Init technologies</h1>
+    </div>
+</div>
+<div class="main-content parentDiv">
+        <p class="textHomePage">Lorem ipsum</p>
+        <img id="imageDisplay" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBHq-tB8gyzvkyzQ5Kj3w9ZAH5g7T6bcAaNA&s" alt="Your Image">
+
+      <br>
+      <button id="registrationButton" class="btn btn-lg btn-warning" *ngIf="!isUserAuthenticated()" routerLink="/registration">Registruj se</button>
+      <button id="loginButton" class="btn btn-lg btn-success" *ngIf="!isUserAuthenticated()" routerLink="/login">Uloguj se</button>
+      <button id="logoutButton" class="btn btn-lg btn-info" *ngIf="isUserAuthenticated()" (click)="logOut()">Izloguj se</button>
+      <br>
+</div>
