@@ -134,7 +134,7 @@ namespace WebApplication1.Controllers
         [HttpGet("get/{vehicleId}")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<VehicleDto> GetBrand(int vehicleId)
+        public ActionResult<VehicleDto> GetVehicle(int vehicleId)
         {
             var vehicle = vehicleRepository.GetVehicleById(vehicleId);
 
@@ -148,7 +148,7 @@ namespace WebApplication1.Controllers
         [HttpGet("vehicles")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        public ActionResult<List<VehicleDto>> GetBrands()
+        public ActionResult<List<VehicleDto>> GetVehicles()
         {
             var vehicles = vehicleRepository.GetVehicles();
 
